@@ -1,0 +1,57 @@
+.bp-video-widget {
+  width: 100%;
+}
+
+.bp-image-widget {
+  max-width: 100%;
+}
+
+//two column widgets
+
+.two-col {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.two-col__column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+//three column widgets
+.three-col {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.three-col__column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+//four column widgets 
+.four-col {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+}
+.four-col__column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+// .apos-areas-widgets-list {
+//   height: 100%;
+// }
+//collapser widget
+.collapser__detail {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
+ 

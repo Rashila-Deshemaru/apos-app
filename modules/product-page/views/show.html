@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block main %}
+  <h1>{{ data.piece.title }}</h1>
+  <section>
+    
+    {% area data.piece, 'image' %}
+      
+    <h3>Rs. {{ data.piece.price }}</h3>
+    <p>{{ data.piece.description}}</p>
+  </section>
+{% endblock %}

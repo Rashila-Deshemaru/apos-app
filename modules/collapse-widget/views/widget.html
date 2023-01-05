@@ -1,0 +1,11 @@
+<section data-collapse-widget class="collapser">
+    <h2>
+        <button data-collapser-button aria-expanded="false">
+            {{ data.widget.heading }}
+        </button>
+    </h2>
+    <div hidden data-collapser-detail>
+    {# `nlbr` and `safe` are core Nunjucks tag filters #}
+    {{ data.widget.detail | nlbr | safe }}
+    </div>
+</section>
