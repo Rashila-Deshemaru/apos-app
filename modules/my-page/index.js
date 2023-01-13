@@ -41,6 +41,7 @@ module.exports = {
               'two-column': {},
               'three-column': {},
               'collapse': {},
+              'columns': {},
               '@apostrophecms/form': {},
               '@apostrophecms/video': {}
             }

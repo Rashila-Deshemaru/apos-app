@@ -50,6 +50,7 @@ require('apostrophe')({
     'three-column-widget': {},
     'four-column-widget': {},
     'collapse-widget': {},
+    'columns-widget': {},
   
 
     // The main form module
