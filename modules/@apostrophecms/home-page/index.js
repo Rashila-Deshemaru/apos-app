@@ -41,6 +41,7 @@ module.exports = {
             'three-column': {},
             'collapse': {},
             'four-column': {}
+            
            
           }
         }

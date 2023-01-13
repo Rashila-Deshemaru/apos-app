@@ -50,6 +50,7 @@ require('apostrophe')({
     'three-column-widget': {},
     'four-column-widget': {},
     'collapse-widget': {},
+  
 
     // The main form module
     '@apostrophecms/form': {},
@@ -63,7 +64,9 @@ require('apostrophe')({
     '@apostrophecms/form-file-field-widget': {},
     '@apostrophecms/form-checkboxes-field-widget': {},
     '@apostrophecms/form-boolean-field-widget': {},
-    '@apostrophecms/form-conditional-widget': {}
+    '@apostrophecms/form-conditional-widget': {},
+
+    '@apostrophecms/video-widget': {}
 
   }
 });
