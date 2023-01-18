@@ -12,6 +12,9 @@
         <a href="{{ article._url }}">{{ article.title }}</a>
       </h2>
 
+      {% set image = apos.attachment.first(article, { group: 'images' }) %}
+        <img src="{{ image._urls[ 'one-third' ] }}">
+
     </article>
   {% endfor %}
 

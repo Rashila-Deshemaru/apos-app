@@ -51,6 +51,7 @@ require('apostrophe')({
     'four-column-widget': {},
     'collapse-widget': {},
     'columns-widget': {},
+    'button-widget': {},
   
 
     // The main form module
