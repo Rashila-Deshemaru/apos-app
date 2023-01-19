@@ -1,5 +1,8 @@
 require('apostrophe')({
   shortName: 'apos-app',
+  bundles: {
+    '@apostrophecms/blog'
+  },
   modules: {
     // Apostrophe module configuration
     // *******************************
@@ -68,7 +71,10 @@ require('apostrophe')({
     '@apostrophecms/form-boolean-field-widget': {},
     '@apostrophecms/form-conditional-widget': {},
 
-    '@apostrophecms/video-widget': {}
+    '@apostrophecms/video-widget': {},
+
+    '@apostrophecms/blog': {},
+    '@apostrophecms/blog-page': {}
 
   }
 });
