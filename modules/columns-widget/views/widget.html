@@ -1,20 +1,20 @@
 <section data-columns-widget>
-    <div class="widget widget-columns widget-columns--{{ data.widget.cols }}">
+    <div class="widget widget-columns col-display widget-columns--{{ data.widget.cols }}">
         <div class="widget-columns__column">
           {% area data.widget, 'one' with data.contextOptions %}
         </div>
         {% if data.widget.cols === '40-40' or data.widget.cols === '50-50' %}
-        <div class="widget-columns__column">
+        <div class="widget-columns__column two-col__column">
           {% area data.widget, 'two' with data.contextOptions %}
         </div>
         {% endif %}
         {% if data.widget.cols === '33-33-33' %}
-          <div class="widget-columns__column">
+          <div class="widget-columns__column three-col__column">
             {% area data.widget, 'three' with data.contextOptions %}
           </div>
         {% endif %}
         {% if data.widget.cols === '25-25-25-25' %}
-        <div class="widget-columns__column">
+        <div class="widget-columns__column four-col__column">
           {% area data.widget, 'four' with data.contextOptions %}
         </div>
       {% endif %}

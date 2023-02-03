@@ -7,7 +7,11 @@
 }
 
 //two column widgets
-
+.col-display {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+}
 .two-col {
   display: flex;
   flex-flow: row wrap;

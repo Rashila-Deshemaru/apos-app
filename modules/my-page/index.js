@@ -43,6 +43,7 @@ module.exports = {
               'collapse': {},
               'columns': {},
               'button': {},
+              'cta-links': {},
               '@apostrophecms/form': {},
               '@apostrophecms/video': {}
             }

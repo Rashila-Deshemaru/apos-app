@@ -17,10 +17,6 @@ module.exports = {
         label:'Article page'
       },
       {
-        name:'product-page',
-        label:'Product page'
-      },
-      {
         name:'topic-page',
         label: 'Topic page'
       },

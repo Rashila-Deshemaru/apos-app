@@ -44,6 +44,8 @@ require('apostrophe')({
 
     'category': {},
 
+    'helper': {},
+
   
     //custom widgets
     'two-column-widget': {},
@@ -52,6 +54,7 @@ require('apostrophe')({
     'collapse-widget': {},
     'columns-widget': {},
     'button-widget': {},
+    'cta-links-widget': {},
   
 
     // The main form module

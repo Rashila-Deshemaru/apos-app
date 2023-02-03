@@ -63,7 +63,10 @@ module.exports = {
         type: 'area',
         contextual: true,
         if: {
-          cols: '33-33-33'
+          $or: [
+            { cols: '25-25-25-25' },
+            { cols: '33-33-33' }
+          ]
         },
         options: {
           widgets: {
