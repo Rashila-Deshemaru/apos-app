@@ -12,10 +12,19 @@
 {% block beforeMain %}
 <div class="bp-wrapper">
   <header class="bp-header">
+
+    <div class="top-header">
+      <ul class="top-head-info">
+        <li>Current COVID-19 procedures for our clinic</li>
+        <li><a href="#">See full details</a></li>
+      </ul>
+      <button type="button" class="btn-close" aria-label="Close"></button>
+    </div>
+
     
     <nav class="bp-nav">
-      <ul>
-        
+      <img class="bp-header__logo" src="/images/logo.png" alt="ApostropheCMS logo">
+      <ul>    
         {% for page in data.home._children %}
           <li>
             <a href="{{ page._url }}">{{ page.title }}</a>
@@ -23,6 +32,10 @@
         {% endfor %}
 
       </ul>
+      <div class="header-button">
+        <a href="#" class="navy-btn">How to Book</a>
+        <a href="#" class="white-btn">Contact us</a>
+      </div>
     </nav>
     {% if not data.user %}
       <a class="bp-button bp-header__login" href="/login">Login</a>

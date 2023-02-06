@@ -40,8 +40,9 @@ module.exports = {
             'two-column': {},
             'three-column': {},
             'collapse': {},
-            'four-column': {}
-            
+            'four-column': {},
+            'button': {},
+            'hero-section': {}
            
           }
         }

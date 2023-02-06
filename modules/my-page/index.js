@@ -44,6 +44,7 @@ module.exports = {
               'columns': {},
               'button': {},
               'cta-links': {},
+              
               '@apostrophecms/form': {},
               '@apostrophecms/video': {}
             }

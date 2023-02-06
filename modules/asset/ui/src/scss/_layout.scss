@@ -22,25 +22,49 @@ body {
 main,
 .bp-footer {
   width: 100%;
-  max-width: 800px;
+  // max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .bp-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-  padding: 40px 0;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // flex-wrap: wrap;
+  // margin-bottom: 10px;
+  // padding: 40px 0;
 }
 .bp-nav {
+  display: flex;
+  padding: 2rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: #ced1d3 3px solid;
   li {
     display: inline-block;
     margin-right: 20px;
-  }
+    }
+    a {
+      color: #315473;
+    }
   li:last-child { margin-right: 0; }
+
+  .header-button {
+    display: inline-block;
+    a.navy-btn {
+      background: #315473;
+      border-radius: 25px;
+      padding: 1rem 2rem;
+      color: #ffffff;
+    }
+    a.white-btn {
+      border: #315473 1px solid;
+      border-radius: 25px;
+      padding: 1rem 2rem;
+      margin-left: 10px;
+    }
+  }
 }
 
 .bp-footer {
@@ -82,4 +106,28 @@ main,
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+//for heartlandfertility
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  background: #ced1d3;
+  padding: 1.5rem 2rem;
+}
+
+ul.top-head-info {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  color: #315473;
+  font-size: 20px;
+  line-height: normal;
+  li {
+    list-style: none;
+    a {
+      color: #315473;
+    }
+  }
+  li:last-child { margin-left: 10px;}
 }

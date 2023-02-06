@@ -55,6 +55,7 @@ require('apostrophe')({
     'columns-widget': {},
     'button-widget': {},
     'cta-links-widget': {},
+    'hero-section-widget': {},
   
 
     // The main form module
