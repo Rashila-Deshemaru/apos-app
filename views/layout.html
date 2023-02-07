@@ -1,4 +1,8 @@
 {# Automatically extends the right outer layout and also handles AJAX siutations #}
+
+{% import 'fragments/navigation.html' as navigation %}
+{% import 'fragments/footer.html' as footer %}
+
 {% extends data.outerLayout %}
 
 {% set title = data.piece.title or data.page.title %}
@@ -9,38 +13,19 @@
   {% endif %}
 {% endblock %}
 
+{% block extraHead %}
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+
 {% block beforeMain %}
 <div class="bp-wrapper">
-  <header class="bp-header">
-
-    <div class="top-header">
-      <ul class="top-head-info">
-        <li>Current COVID-19 procedures for our clinic</li>
-        <li><a href="#">See full details</a></li>
-      </ul>
-      <button type="button" class="btn-close" aria-label="Close"></button>
-    </div>
-
-    
-    <nav class="bp-nav">
-      <img class="bp-header__logo" src="/images/logo.png" alt="ApostropheCMS logo">
-      <ul>    
-        {% for page in data.home._children %}
-          <li>
-            <a href="{{ page._url }}">{{ page.title }}</a>
-          </li>
-        {% endfor %}
-
-      </ul>
-      <div class="header-button">
-        <a href="#" class="navy-btn">How to Book</a>
-        <a href="#" class="white-btn">Contact us</a>
-      </div>
-    </nav>
     {% if not data.user %}
       <a class="bp-button bp-header__login" href="/login">Login</a>
     {% endif %}
-  </header>
+
+    {% render navigation.navigationArea() %}
+ 
   <main class="bp-main">
 {% endblock %}
 
@@ -54,11 +39,6 @@
 
 {% block afterMain %}
   </main>
-  <footer class="bp-footer">
-      <ul class="bp-footer__links">
-        <li><a href="https://apostrophecms.com/" target="_blank">Terms and Conditions</a></li>
-        <li><a href="https://chat.apostrophecms.com/" target="_blank">Privacy Policy</a></li>
-      </ul>
-  </footer>
+  {% render footer.footerArea() %}
 </div>{# Close .bp-wrapper #}
 {% endblock %}

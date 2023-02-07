@@ -1,6 +1,31 @@
+<!-- check the type of media and then set the 'background' with fallback -->
+{% if data.widget.MediaType.items[0].type === '@apostrophecms/image' %}
+<!-- if it is an image,get the first attachment -->
+  {% set imgMedia = apos.image.first(data.widget.MediaType.items[0]) %}
+  <!-- Then grab the url of the size we want to use-->
+  {% set background = apos.attachment.url(imgMedia, {size: 'max'}) %}
+{% elseif data.widget.MediaType.items[0].type === '@apostrophecms/video' %}
+<!-- For a video we jump into the array data and grab the URL -->
+<!-- Use 'apos.log' to look at the available data -->
+  {% set background = data.widget.MediaType.items[0].video.url %}
+{% else %}
+<!-- Set a fallback. What if the editor doesn't add anything? Is your field required?-->
+  {% set background = 'https://via.placeholder.com/350x150' %}
+{% endif %}
+
 <section data-hero-section-widget class="hero-banner-section">
     <div class="home-banner">
         {% area data.widget, 'ContentArea' %}
+        
     </div>
 </section>
 
+
+<style>
+    .hero-banner-section {
+        background: url('{{ background }}');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+</style>
