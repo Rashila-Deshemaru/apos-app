@@ -1,5 +1,6 @@
 {# Automatically extends the right outer layout and also handles AJAX siutations #}
 
+{% import 'fragments/header.html' as header %}
 {% import 'fragments/navigation.html' as navigation %}
 {% import 'fragments/footer.html' as footer %}
 
@@ -23,7 +24,7 @@
     {% if not data.user %}
       <a class="bp-button bp-header__login" href="/login">Login</a>
     {% endif %}
-
+    {% render header.headerArea() %}
     {% render navigation.navigationArea() %}
  
   <main class="bp-main">

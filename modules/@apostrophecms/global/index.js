@@ -1,6 +1,11 @@
 module.exports = {
     fields: {
       add: {
+        headermessage: {
+          type: 'string',
+          label: 'Header Message',
+          required: true
+        },
         brand: {
           type: 'string',
           label: 'Brand name',
@@ -50,6 +55,10 @@ module.exports = {
         }
       },
       group: {
+        header: {
+          label: 'Top Header',
+          fields: ['headermessage' ]
+        },
         navigation: {
           label: 'Navigation links',
           fields: [ 'brand', 'pages' ]

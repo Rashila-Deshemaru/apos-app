@@ -1,0 +1,18 @@
+{% fragment headerArea() %}
+
+{% import "link.html" as link %}
+
+<div class="top-header">
+    <ul class="top-head-info">
+      <li>{{ data.global.headermessage }}</li>
+      <li>  {{ link.render({
+        label: widget.linkText,
+        path: path,
+        target: widget.linkTarget,
+        class: 'button'
+      })}}</li>
+    </ul>
+    <button type="button" class="btn-close" aria-label="Close"></button>
+</div>
+
+{% endfragment %}
