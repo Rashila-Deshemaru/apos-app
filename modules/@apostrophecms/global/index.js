@@ -1,6 +1,9 @@
+const linkConfig = require('../../../lib/link');
+console.log(linkConfig);
 module.exports = {
     fields: {
       add: {
+        ...linkConfig.link,
         headermessage: {
           type: 'string',
           label: 'Header Message',
@@ -57,7 +60,7 @@ module.exports = {
       group: {
         header: {
           label: 'Top Header',
-          fields: ['headermessage' ]
+          fields: ['headermessage', ...Object.keys(linkConfig.link) ]
         },
         navigation: {
           label: 'Navigation links',

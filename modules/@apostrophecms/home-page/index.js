@@ -42,7 +42,8 @@ module.exports = {
             'collapse': {},
             'four-column': {},
             'button': {},
-            'hero-section': {}
+            'hero-section': {},
+            'slider': {}
            
           }
         }

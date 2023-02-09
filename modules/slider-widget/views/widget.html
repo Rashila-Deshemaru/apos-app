@@ -1,0 +1,9 @@
+<section data-slider-widget>
+    <div class="owl-carousel owl-theme">
+        {% for  sliderImage in data.widget.sliderImages}
+        <div class="item">
+            {% area data.piece, 'sliderImage' %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
