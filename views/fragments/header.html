@@ -2,18 +2,17 @@
 
 {% import "link.html" as link %}
 
-{% set widget = data.widget %}
-{% set path = apos.helper.linkPath(widget) %}
-
+{% set path = apos.helper.linkPath(data.global)%}
 
 <div class="top-header">
     <ul class="top-head-info">
       <li>{{ data.global.headermessage }}</li>
-      <li>{{ link.render({
-        label: widget.linkText,
-        path: path
-          })}}
-      </li>
+      <li>  {{ link.render({
+        label: data.global.linkText,
+        path: path,
+        target: data.global.linkTarget,
+        class: 'button'
+      })}}</li>
     </ul>
     <button type="button" class="btn-close" aria-label="Close"></button>
 </div>

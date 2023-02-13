@@ -1,6 +1,7 @@
 @import url('~normalize.css');
 // NOTE: We're using a `.bp-` namespace to indicate these are the boilerplate
 // styles.
+@import 'bootstrap/scss/bootstrap';
 @import './scss/_settings';
 @import './scss/_type';
 @import './scss/_layout';

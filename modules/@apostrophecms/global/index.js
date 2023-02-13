@@ -1,5 +1,4 @@
 const linkConfig = require('../../../lib/link');
-console.log(linkConfig);
 module.exports = {
     fields: {
       add: {
@@ -10,8 +9,14 @@ module.exports = {
           required: true
         },
         brand: {
-          type: 'string',
-          label: 'Brand name',
+          type: 'area',
+          label: 'Brand logo',
+          options: {
+            max: 1,
+            widgets: {
+              '@apostrophecms/image': {}
+            }
+          },
           required: true
         },
         pages: {
