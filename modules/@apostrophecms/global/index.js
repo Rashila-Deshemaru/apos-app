@@ -1,14 +1,22 @@
+const linkConfig = require('../../../lib/link');
 module.exports = {
     fields: {
       add: {
+        ...linkConfig.link,
         headermessage: {
           type: 'string',
           label: 'Header Message',
           required: true
         },
         brand: {
-          type: 'string',
-          label: 'Brand name',
+          type: 'area',
+          label: 'Brand logo',
+          options: {
+            max: 1,
+            widgets: {
+              '@apostrophecms/image': {}
+            }
+          },
           required: true
         },
         pages: {
@@ -57,7 +65,7 @@ module.exports = {
       group: {
         header: {
           label: 'Top Header',
-          fields: ['headermessage' ]
+          fields: ['headermessage', ...Object.keys(linkConfig.link)]
         },
         navigation: {
           label: 'Navigation links',

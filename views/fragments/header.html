@@ -2,13 +2,15 @@
 
 {% import "link.html" as link %}
 
+{% set path = apos.helper.linkPath(data.global)%}
+
 <div class="top-header">
     <ul class="top-head-info">
       <li>{{ data.global.headermessage }}</li>
       <li>  {{ link.render({
-        label: widget.linkText,
+        label: data.global.linkText,
         path: path,
-        target: widget.linkTarget,
+        target: data.global.linkTarget,
         class: 'button'
       })}}</li>
     </ul>
