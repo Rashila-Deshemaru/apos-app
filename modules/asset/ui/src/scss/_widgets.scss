@@ -16,6 +16,12 @@
   display: flex;
   flex-flow: row wrap;
   width: 100%;
+  .left-column {
+    margin-bottom: 150px;
+  }
+  .right-column {
+    margin-top: 150px;
+  }
 }
 
 .two-col__column {
@@ -23,6 +29,8 @@
   flex-direction: column;
   flex: 1;
 }
+
+
 
 //three column widgets
 .three-col {

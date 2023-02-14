@@ -8,15 +8,11 @@ module.exports = {
           label: 'Header Message',
           required: true
         },
-        brand: {
-          type: 'area',
+        _brand: {
           label: 'Brand logo',
-          options: {
-            max: 1,
-            widgets: {
-              '@apostrophecms/image': {}
-            }
-          },
+          type: 'relationship',
+          withType: '@apostrophecms/image',
+          max: 1,
           required: true
         },
         pages: {
@@ -69,7 +65,7 @@ module.exports = {
         },
         navigation: {
           label: 'Navigation links',
-          fields: [ 'brand', 'pages' ]
+          fields: [ '_brand', 'pages' ]
         },
         footer: {
             label: 'Footer URLs and text',

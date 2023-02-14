@@ -29,31 +29,16 @@ main,
 
 .navbar {
   display: flex;
+  ul.navbar-nav {
+    li {
+      a, a:visited {
+        color: #315473;
+      }
+    }
+  }
 }
 
-// .bp-header {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   flex-wrap: wrap;
-//   margin-bottom: 10px;
-//   padding: 40px 0;
-// }
 
-// .bp-nav {
-//   display: flex;
-//   padding: 2rem 2rem;
-//   justify-content: space-between;
-//   align-items: center;
-//   border-bottom: #ced1d3 3px solid;
-//   li {
-//     display: inline-block;
-//     margin-right: 20px;
-//     }
-//     a {
-//       color: #315473;
-//     }
-//   li:last-child { margin-right: 0; }
 
 //   .header-button {
 //     display: inline-block;
