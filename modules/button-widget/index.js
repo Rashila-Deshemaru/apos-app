@@ -35,6 +35,20 @@ module.exports = {
             value: 'right'
           }
         ]
+      },
+      buttonStyles: {
+        type: 'select',
+        label: 'Choose your button styles',
+        choices: [
+          {
+            label: 'White Background',
+            value: 'whitebg'
+          },
+          {
+            label: 'Blue Background',
+            value: 'bluebg'
+          }
+        ]
       }
     }
   }

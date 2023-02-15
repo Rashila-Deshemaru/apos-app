@@ -44,7 +44,8 @@ module.exports = {
             'four-column': {},
             'button': {},
             'hero-section': {},
-            'slider': {}
+            'slider': {},
+            'fullwidth-bg': {}
            
           }
         }

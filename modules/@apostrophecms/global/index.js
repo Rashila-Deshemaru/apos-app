@@ -15,6 +15,13 @@ module.exports = {
           max: 1,
           required: true
         },
+        navbutton: {
+          label: 'Navbar button',
+          type: 'area',
+          options: {
+            'button': {}
+          }
+        },
         pages: {
           type: 'array',
           titleField: 'Pages',
@@ -65,7 +72,7 @@ module.exports = {
         },
         navigation: {
           label: 'Navigation links',
-          fields: [ '_brand', 'pages' ]
+          fields: [ '_brand', 'pages', 'navbutton']
         },
         footer: {
             label: 'Footer URLs and text',

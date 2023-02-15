@@ -6,14 +6,14 @@ export default () => {
   // Your own project level JS may go here
   // console.log('Hello World');
   
-  $(document).ready(function(){
-    $('#cross-icon').click(function(){
-      $('.top-header').hide()
+  jQuery(document).ready(function(){
+    jQuery('#cross-icon').click(function(){
+      jQuery('.top-header').hide()
     });
   });
 
-  $(document).ready(function(){
-    $(".owl-carousel").owlCarousel({
+  jQuery(document).ready(function(){
+    jQuery(".owl-carousel").owlCarousel({
       loop:true,
       margin:10,
       nav:true,

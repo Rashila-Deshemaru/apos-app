@@ -5,6 +5,17 @@
 <nav class="navbar" id="mainNav">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{ data.home._url }}"><img src="{{ apos.attachment.url(image) }}" alt="" /></a>
+    <div class="navbar-button">
+      {% for area in data.global.navbutton %}
+        {{ link.render({
+          label: widget.linkText,
+          path: path,
+          target: widget.linkTarget,
+          class: 'button'
+        })}}
+      {% endfor %}
+    </div>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
