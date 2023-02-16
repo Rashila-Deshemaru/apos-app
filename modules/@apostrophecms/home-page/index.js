@@ -43,9 +43,10 @@ module.exports = {
             'collapse': {},
             'four-column': {},
             'button': {},
-            'hero-section': {},
-            'slider': {},
-            'fullwidth-bg': {}
+            // 'hero-section': {},
+            'cta-links': {},
+            'fullwidth-bg': {},
+            'home-banner': {}
            
           }
         }

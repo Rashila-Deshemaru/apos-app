@@ -3,11 +3,11 @@ module.exports = {
     fields: {
       add: {
         ...linkConfig.link,
-        headermessage: {
-          type: 'string',
-          label: 'Header Message',
-          required: true
-        },
+        // headermessage: {
+        //   type: 'string',
+        //   label: 'Header Message',
+        //   required: true
+        // },
         _brand: {
           label: 'Brand logo',
           type: 'relationship',
@@ -15,11 +15,13 @@ module.exports = {
           max: 1,
           required: true
         },
-        navbutton: {
-          label: 'Navbar button',
+        headerlink: {
+          label: 'Header Link',
           type: 'area',
           options: {
-            'button': {}
+            widgets: {
+              'cta-links': {}
+            }
           }
         },
         pages: {
@@ -68,11 +70,11 @@ module.exports = {
       group: {
         header: {
           label: 'Top Header',
-          fields: ['headermessage', ...Object.keys(linkConfig.link) ]
+          fields: ['_brand', 'headerlink']
         },
         navigation: {
           label: 'Navigation links',
-          fields: [ '_brand', 'pages', 'navbutton']
+          fields: [ 'pages']
         },
         footer: {
             label: 'Footer URLs and text',

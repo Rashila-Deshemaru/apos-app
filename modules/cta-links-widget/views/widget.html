@@ -3,10 +3,10 @@
 {% set widget = data.widget %}
 
 <div class="widget cta-links-widget">
-  <ol class="cta-links-widget__items">
+  <div class="cta-links-widget__items">
     {% for item in data.widget.links %}
       {% set path = apos.helper.linkPath(item) %}
-      <li class="cta-links-widget__item" class="{{ item._id }}">
+      <div class="cta-links-widget__item" class="{{ item._id }}">
         {{ link.render({
           label: item.linkText,
           path: path,
@@ -28,9 +28,9 @@
             {% endif %}
           </span>
         {% endif %}
-      </li>
+        </div>
     {% endfor %}
-  </ol>
+  </div>
 </div>
 
 <style>

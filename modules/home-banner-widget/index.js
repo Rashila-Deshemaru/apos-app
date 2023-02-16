@@ -1,28 +1,26 @@
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
-    label: 'Two column'
+    label: 'Home Banner Widget',
   },
-
   fields: {
     add: {
-      columnOne: {
+      imagePart: {
         type: 'area',
-        label: 'Column One',
+        label: 'Banner Image',
         options: {
           widgets: {
-            '@apostrophecms/rich-text': {},
             '@apostrophecms/image': {}
           }
         }
       },
-      columnTwo: {
+      textPart: {
         type: 'area',
-        label: 'Column Two',
+        label: 'Banner Content',
         options: {
           widgets: {
             '@apostrophecms/rich-text': {},
-            '@apostrophecms/image': {}
+            'button': {}
           }
         }
       }

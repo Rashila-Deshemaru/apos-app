@@ -38,25 +38,6 @@ main,
   }
 }
 
-
-
-//   .header-button {
-//     display: inline-block;
-//     a.navy-btn {
-//       background: #315473;
-//       border-radius: 25px;
-//       padding: 1rem 2rem;
-//       color: #ffffff;
-//     }
-//     a.white-btn {
-//       border: #315473 1px solid;
-//       border-radius: 25px;
-//       padding: 1rem 2rem;
-//       margin-left: 10px;
-//     }
-//   }
-// }
-
 .bp-footer {
   padding: 40px 0; 
 }
@@ -98,26 +79,55 @@ main,
   margin-right: auto;
 }
 
-//for heartlandfertility
+
+
+//for procea
+//top header
 .top-header {
-  display: flex;
-  justify-content: space-between;
-  background: #ced1d3;
-  padding: 1.5rem 2rem;
+  background: #f6f7fb;
+  padding: 1rem 0;
 }
 
-ul.top-head-info {
+.top-header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.navbar-link {
   display: flex;
   margin: 0;
   padding: 0;
-  color: #315473;
   font-size: 20px;
   line-height: normal;
   li {
     list-style: none;
     a {
-      color: #315473;
+      color: #075664;
     }
   }
   li:last-child { margin-left: 10px;}
 }
+
+//nav
+.navigation-section {
+  padding: 1.5rem 0;
+}
+ul.menu-section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  padding: 0 40px;
+  li {
+    list-style: none;
+    a {
+      color: #075664;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 23px;
+      padding-bottom: 25px;
+    }
+  }
+}
+

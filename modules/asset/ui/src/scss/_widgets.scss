@@ -16,12 +16,6 @@
   display: flex;
   flex-flow: row wrap;
   width: 100%;
-  .left-column {
-    margin-bottom: 150px;
-  }
-  .right-column {
-    margin-top: 150px;
-  }
 }
 
 .two-col__column {
@@ -65,5 +59,33 @@
   &.is-active {
     display: block;
   }
+}
+
+//home-banner-widget 
+.home-banner-wrapper {
+  padding-bottom: 70px;
+}
+.home-banner-content {
+  position: relative;
+}
+.banner-image-part {
+  min-height: 700px;
+  width: 100%;
+  position: relative;
+
+  img {
+    position: absolute;
+    height: 700px;
+    top: 0;
+    left: 15%;
+  }
+}
+.banner-text-part {
+  position: absolute;
+  width: 55%;
+  margin: 0;
+  padding: 50px 30px;
+  top: 50%;
+  background: #075664;
 }
 

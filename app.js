@@ -56,8 +56,8 @@ require('apostrophe')({
     'button-widget': {},
     'cta-links-widget': {},
     'hero-section-widget': {},
-    'slider-widget': {},
     'fullwidth-bg-widget': {},
+    'home-banner-widget': {},
   
 
     // The main form module

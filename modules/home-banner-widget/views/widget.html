@@ -1,0 +1,21 @@
+<section data-home-banner-widget>
+    <div class="home-banner-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="home-banner-content">
+                        <div class="banner-image-part">
+
+                            {% set image = apos.attachment.first(data.widget.imagePart) %}
+                            <img src="{{ apos.attachment.url(image) }}" alt="" />
+                        
+                        </div>
+                        <div class="banner-text-part">
+                            {% area data.widget, 'textPart' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

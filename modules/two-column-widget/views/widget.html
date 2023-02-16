@@ -1,17 +1,3 @@
-<!-- check the type of media and then set the 'background' with fallback -->
-{% if data.widget.MediaType.items[0].type === '@apostrophecms/image' %}
-<!-- if it is an image,get the first attachment -->
-  {% set imgMedia = apos.image.first(data.widget.MediaType.items[0]) %}
-  <!-- Then grab the url of the size we want to use-->
-  {% set background = apos.attachment.url(imgMedia, {size: 'max'}) %}
-{% elseif data.widget.MediaType.items[0].type === '@apostrophecms/video' %}
-<!-- For a video we jump into the array data and grab the URL -->
-<!-- Use 'apos.log' to look at the available data -->
-  {% set background = data.widget.MediaType.items[0].video.url %}
-{% else %}
-<!-- Set a fallback. What if the editor doesn't add anything? Is your field required?-->
-  {% set background = data.piece.backgroundColor %}
-{% endif %}
 
 <section data-two-column-widget class="two-col hero-banner">
     <div class="two-col__column left-column">
@@ -20,16 +6,4 @@
      <div class="two-col__column right-column">
         {% area data.widget, 'columnTwo' %}
     </div>
-    <!-- <div class="content-area">
-        {% area data.widget, 'ContentArea' %}
-    </div> -->
 </section>
-
-<style>
-    .hero-banner {
-        background: url('{{ background }}');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-</style>
