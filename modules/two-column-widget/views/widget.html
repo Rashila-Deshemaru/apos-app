@@ -1,9 +1,16 @@
 
-<section data-two-column-widget class="two-col hero-banner">
-    <div class="two-col__column left-column">
-        {% area data.widget, 'columnOne' %}
+<div class="data-two-column-widget">
+    <div class="container">
+        <div class="col-12">
+            <section data-two-column-widget class="two-col hero-banner">
+                <div class="two-col__column left-column">
+                    {% area data.widget, 'columnOne' %}
+                </div>
+                 <div class="two-col__column right-column">
+                    {% area data.widget, 'columnTwo' %}
+                </div>
+            </section>
+        </div>
     </div>
-     <div class="two-col__column right-column">
-        {% area data.widget, 'columnTwo' %}
-    </div>
-</section>
+</div>
+

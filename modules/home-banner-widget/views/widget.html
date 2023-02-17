@@ -8,14 +8,27 @@
 
                             {% set image = apos.attachment.first(data.widget.imagePart) %}
                             <img src="{{ apos.attachment.url(image) }}" alt="" />
-                        
+                            
+                            <div class="banner-text-part">
+                                {% area data.widget, 'textPart' %}
+    
+                                <div class="banner-button-part">
+                                    {% area data.widget, 'buttonArea' %}
+                                </div>
+                            </div>
+    
                         </div>
-                        <div class="banner-text-part">
-                            {% area data.widget, 'textPart' %}
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- <style>
+    .banner-text-part {
+        background-color: {{ data.piece.backgroundColor }};
+    }
+   
+</style> -->

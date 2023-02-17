@@ -2,12 +2,6 @@ const linkConfig = require('../../../lib/link');
 module.exports = {
     fields: {
       add: {
-        ...linkConfig.link,
-        // headermessage: {
-        //   type: 'string',
-        //   label: 'Header Message',
-        //   required: true
-        // },
         _brand: {
           label: 'Brand logo',
           type: 'relationship',

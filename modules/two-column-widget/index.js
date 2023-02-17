@@ -12,7 +12,8 @@ module.exports = {
         options: {
           widgets: {
             '@apostrophecms/rich-text': {},
-            '@apostrophecms/image': {}
+            '@apostrophecms/image': {},
+            'button': {}
           }
         }
       },
@@ -22,7 +23,8 @@ module.exports = {
         options: {
           widgets: {
             '@apostrophecms/rich-text': {},
-            '@apostrophecms/image': {}
+            '@apostrophecms/image': {},
+            'button': {}
           }
         }
       }
