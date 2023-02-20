@@ -1,0 +1,21 @@
+<div class="data-services-column-widget">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <section data-services-column-widget class="two-col services-column">
+                    <div class="two-col__column left-column">
+                        <div class="services-content">
+                            {% area data.widget, 'leftSection' %}
+                        </div>                   
+                    </div>
+                     <div class="two-col__column right-column">
+                        <div class="services-image">
+                            {% set image = apos.attachment.first(data.widget.rightSection) %}
+                            <img src="{{ apos.attachment.url(image) }}" alt="" />
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

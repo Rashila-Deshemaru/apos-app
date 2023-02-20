@@ -21,7 +21,8 @@ module.exports = {
                 'alignRight',
                 'alignJustify'
               ]
-            }
+            },
+            'cta-links': {}
           }
         }
       },
@@ -41,7 +42,8 @@ module.exports = {
                 'alignRight',
                 'alignJustify'
               ]
-            }
+            },
+            'cta-links': {}
           }
         }
       },
@@ -61,7 +63,8 @@ module.exports = {
                 'alignRight',
                 'alignJustify'
               ]
-            }
+            },
+            'cta-links': {}
           }
         }
       },
@@ -81,7 +84,8 @@ module.exports = {
                 'alignRight',
                 'alignJustify'
               ]
-            }
+            },
+            'cta-links': {}
           }
         }
       }

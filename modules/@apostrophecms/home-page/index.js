@@ -46,7 +46,8 @@ module.exports = {
             // 'hero-section': {},
             'cta-links': {},
             'fullwidth-bg': {},
-            'home-banner': {}
+            'home-banner': {},
+            'services-column': {}
            
           }
         }

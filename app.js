@@ -58,6 +58,7 @@ require('apostrophe')({
     'hero-section-widget': {},
     'fullwidth-bg-widget': {},
     'home-banner-widget': {},
+    'services-column-widget': {},
   
 
     // The main form module
