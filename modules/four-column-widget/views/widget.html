@@ -1,21 +1,19 @@
 <div class="data-four-column-widget">
     <div class="container">
-        <div class="row">
-            <section data-four-column-widget class="four-col">
+        <section data-four-column-widget class="four-col home-redirects">
+            <div class="four-col__column one-fourth">
+                {% area data.widget, 'columnOne' %}
+            </div>
                 <div class="four-col__column">
-                    {% area data.widget, 'columnOne' %}
-                </div>
-                 <div class="four-col__column">
-                    {% area data.widget, 'columnTwo' %}
-                </div>
-                <div class="four-col__column">
-                    {% area data.widget, 'columnThree' %}
-                </div>
-                <div class="four-col__column">
-                    {% area data.widget, 'columnFour' %}
-                </div>
-            </section>
-        </div>
+                {% area data.widget, 'columnTwo' %}
+            </div>
+            <div class="four-col__column">
+                {% area data.widget, 'columnThree' %}
+            </div>
+            <div class="four-col__column">
+                {% area data.widget, 'columnFour' %}
+            </div>
+        </section>
     </div>
 </div>
 
