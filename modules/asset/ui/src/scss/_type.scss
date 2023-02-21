@@ -10,7 +10,7 @@ h1 {
 }
 
 a {
-  color: $color-purple;
+  // color: $color-purple;
   text-decoration: none;
 
   // &:hover,
@@ -18,9 +18,9 @@ a {
   //   text-decoration: underline;
   // }
 
-  &:visited {
-    color: $color-purple-light;
-  }
+  // &:visited {
+  //   color: $color-purple-light;
+  // }
 }
 
 ::selection {

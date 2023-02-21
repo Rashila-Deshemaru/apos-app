@@ -59,6 +59,7 @@ require('apostrophe')({
     'fullwidth-bg-widget': {},
     'home-banner-widget': {},
     'services-column-widget': {},
+    'article-widget': {},
   
 
     // The main form module

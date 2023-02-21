@@ -47,7 +47,8 @@ module.exports = {
             'cta-links': {},
             'fullwidth-bg': {},
             'home-banner': {},
-            'services-column': {}
+            'services-column': {},
+            'article': {}
            
           }
         }
