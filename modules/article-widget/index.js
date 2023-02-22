@@ -1,7 +1,9 @@
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
-    label: 'Article Widget',
+    name: 'article',
+    label: 'Recent Articles',
+    icon: 'text-subject'
   },
   fields: {
     add: {
@@ -11,5 +13,8 @@ module.exports = {
         def: 5
       }
     }
+  },
+  icons: {
+    'text-subject': 'TextSubject'
   }
 };

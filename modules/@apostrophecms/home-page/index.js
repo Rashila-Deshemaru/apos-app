@@ -45,7 +45,6 @@ module.exports = {
             'button': {},
             // 'hero-section': {},
             'cta-links': {},
-            'fullwidth-bg': {},
             'home-banner': {},
             'services-column': {},
             'article': {}

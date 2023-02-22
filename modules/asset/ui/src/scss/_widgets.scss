@@ -50,6 +50,7 @@
   display: flex;
   flex-flow: row wrap;
   width: 100%;
+  padding: 50px 0;
 }
 
 .two-col__column {
@@ -101,7 +102,7 @@
 .button-widget {
   display: flex;
   justify-content: center;
-  padding: 30px 0;
+  // padding: 30px 0;
   a {
     border: 1.6px solid #1b5f50;
     border-radius: 40px;

@@ -15,7 +15,7 @@
           <a class="navbar-brand" href="{{ data.home._url }}"><img src="{{ apos.attachment.url(image) }}" alt="" /></a>
 
           <ul class="navbar-link">
-            {% for item in data.widget.links %}
+            {% for area in data.widget.headerlink %}
             <li>        
               {{ link.render({
                 label: item.linkText,

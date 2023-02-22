@@ -36,13 +36,11 @@ require('apostrophe')({
     'article': {},
     'article-page': {},
 
-    'product': {},
-    'product-page': {},
 
     'topic': {},
     'topic-page': {},
 
-    'category': {},
+  
 
     'helper': {},
 
@@ -56,7 +54,6 @@ require('apostrophe')({
     'button-widget': {},
     'cta-links-widget': {},
     'hero-section-widget': {},
-    'fullwidth-bg-widget': {},
     'home-banner-widget': {},
     'services-column-widget': {},
     'article-widget': {},

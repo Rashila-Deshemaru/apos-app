@@ -7,17 +7,18 @@ module.exports = {
   fields: {
     add: {
       body: {
-        label: 'Article text',
+        label: 'Article body',
         type: 'area',
         options: {
-          max: 1,
+          // max: 1,
           widgets: {
-            '@apostrophecms/rich-text': {}
+            '@apostrophecms/rich-text': {},
+            '@apostrophecms/image': {}
           }
         }
       },
       fileUpload: {
-        label: 'File upload',
+        label: 'Feature image upload',
         type: 'attachment',
         fileGroup: 'images'
       },
@@ -39,5 +40,22 @@ module.exports = {
         fields: [ 'title', 'body', 'fileUpload', '_topics' ]
       }
     }
-  }
+  },
+  // columns: {
+  //   add: {
+  //     _topics: {
+  //       label: 'Topics',
+  //       component: 'DemoCellRelation'
+  //     }
+  //   }
+  // },
+  components(self) {
+    return {
+      async recent(req, data) {
+        return {
+          articles: await self.find(req).limit(data.limit).sort({ createdAt: -1 }).toArray()
+        };
+      }
+    };
+  },
 }
