@@ -43,22 +43,23 @@ module.exports = {
             }
           }
         },
-        twitterUrl: {
-            type: 'url',
-            label: 'Twitter URL'
+        footerButton: {
+          label: 'Footer Button',
+          type: 'area',
+          options: {
+            widgets: {
+              'button': {}
+            }
+          }
         },
-        facebookUrl: {
-            type: 'url',
-            label: 'Facebook URL'
-        },
-        githubUrl: {
-            type: 'url',
-            label: 'Github URL'
-        },
-        copyright: {
-            type: 'string',
-            label: 'Copyright text',
-            required: true
+        footerLink: {
+          label: 'Footer Link',
+          type: 'area',
+          options: {
+            widgets: {
+              'cta-links': {}
+            }
+          }
         }
       },
       group: {
@@ -72,7 +73,7 @@ module.exports = {
         },
         footer: {
             label: 'Footer URLs and text',
-            fields: [ 'twitterUrl', 'facebookUrl', 'githubUrl', 'copyright' ]
+            fields: [ 'footerButton', 'footerLink' ]
         }
       }
     }

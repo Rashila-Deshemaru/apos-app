@@ -1,44 +1,60 @@
 {% fragment footerArea() %}
+
+{% import "link.html" as link %}
+
+{% set path = apos.helper.linkPath(data.global)%}
+
+<!-- {% set class = '' %}
+{% if widget.block %}
+  {% set class = class + ' button-widget--block-' + widget.block %}
+{% endif %}
+{% if widget.alignment %}
+  {% set class = class + ' button-widget--alignment-' + widget.alignment %}
+{% endif %} -->
+
+
 <!-- Footer-->
-<footer class="border-top">
-  <div class="container px-4 px-lg-5">
-    <div class="row gx-4 gx-lg-5 justify-content-center">
-      <div class="col-md-10 col-lg-8 col-xl-7">
-        <ul class="list-inline text-center">
-          {% if data.global.twitterUrl %}
-            <li class="list-inline-item">
-              <a href="{{ data.global.twitterUrl }}">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          {% endif %}
-          {% if data.global.facebookUrl %}
-            <li class="list-inline-item">
-              <a href="{{ data.global.facebookUrl }}">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          {% endif %}
-          {% if data.global.githubUrl %}
-            <li class="list-inline-item">
-              <a href="{{ data.global.githubUrl }}">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          {% endif %}
+<footer class="main-footer">
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col-12">
+        <ul class="footer-button">        
+          {% for item in data.global.footerButton.items %}
+          <li class="widget button-widget {{ class }}" id="{{ widget._id }}">      
+            {{ link.render({
+              label: item.linkText,
+              path: path,
+              target: item.linkTarget,
+              class: 'button'
+            })}}
+          </li>
+          {% endfor %}
         </ul>
-        <div class="small text-center text-muted fst-italic"> &copy; {{ data.global.copyright }}</div>
+      </div>
+      <div class="col-12 green-footer">
+        <ul class="footer-link">
+          {% for item in data.global.footerLink.items[0].links %}
+          <li class="cta-links-widget__item" class="{{ item._id }}">        
+            {{ link.render({
+              label: item.linkText,
+              path: path,
+              target: item.linkTarget,
+              class: 'button cta-links-widget__button'
+            })}}
+          </li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </div>
 </footer>
+
+  
+
 {% endfragment %}
+<!-- 
+<style>
+  #{{ widget._id }} .button:hover{
+    background-color: {{ widget.color }}
+  }
+</style> -->

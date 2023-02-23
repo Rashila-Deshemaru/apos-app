@@ -1,25 +1,35 @@
-{% if data.articles.length %}
-  {% for article in data.articles %}
-    <div class="article-excerpt">
-      {% if not article._url %}
-          <p class="meta purple">
-            <em>You will need to publish an Article Index page for article links to work.</em>
-          </p>
-      {% endif %}
-      <h3><a href="{{ article._url }}">{{ article.title }}</a></h3>
-      <article>
-        {% if not apos.area.isEmpty(article, 'body') %}
-           <p class="article-blurb">{% area article, 'body' %}</p>
+<div class="recent-article-section">
+  <div class="container">
+    <div class="row">
+      {% if data.articles.length %}
+      {% for article in data.articles %}
+      <div class="col-lg-4">
+        <div class="article-excerpt">
+          {% if not article._url %}
+              <p class="meta purple">
+                <em>You will need to publish an Article Index page for article links to work.</em>
+              </p>
+          {% endif %}
+          
+          {% set image = apos.attachment.first(article, { group: 'images' }) %}
+          <img src="{{ image._urls[ 'one-third' ] }}">
 
-           {% set image = apos.attachment.first(article, { group: 'images' }) %}
-           <img src="{{ image._urls[ 'one-third' ] }}">
-           
-        {% else %}
-          <p class="placeholder">No blurb for this article</p>
-        {% endif %}
-      </article>
+          <h3><a href="{{ article._url }}">{{ article.title }}</a></h3>
+
+          <article>
+            {% if not apos.area.isEmpty(article, 'body') %}
+              <p class="article-blurb">{% area article, 'body' %}</p>           
+            {% else %}
+              <p class="placeholder">No blurb for this article</p>
+            {% endif %}
+          </article>
+        </div>
+      </div>
+      {% endfor %}
+    {% else %}
+      <p>There are no articles yet. Try adding one.</p>
+    {% endif %}
     </div>
-  {% endfor %}
-{% else %}
-  <p>There are no articles yet. Try adding one.</p>
-{% endif %}
+  </div>
+</div>
+

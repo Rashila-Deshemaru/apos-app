@@ -10,7 +10,6 @@ module.exports = {
         label: 'Article body',
         type: 'area',
         options: {
-          // max: 1,
           widgets: {
             '@apostrophecms/rich-text': {},
             '@apostrophecms/image': {}
@@ -41,14 +40,6 @@ module.exports = {
       }
     }
   },
-  // columns: {
-  //   add: {
-  //     _topics: {
-  //       label: 'Topics',
-  //       component: 'DemoCellRelation'
-  //     }
-  //   }
-  // },
   components(self) {
     return {
       async recent(req, data) {
