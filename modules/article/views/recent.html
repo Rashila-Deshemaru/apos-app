@@ -11,18 +11,26 @@
               </p>
           {% endif %}
           
-          {% set image = apos.attachment.first(article, { group: 'images' }) %}
-          <img src="{{ image._urls[ 'one-third' ] }}">
+          <div class="article-thumbnail">
+            {% set image = apos.attachment.first(article, { group: 'images' }) %}
+            <img src="{{ image._urls[ 'one-third' ] }}">  
+          </div>
 
-          <h3><a href="{{ article._url }}">{{ article.title }}</a></h3>
+          <div class="article-widget-body">
 
-          <article>
-            {% if not apos.area.isEmpty(article, 'body') %}
-              <p class="article-blurb">{% area article, 'body' %}</p>           
-            {% else %}
-              <p class="placeholder">No blurb for this article</p>
-            {% endif %}
-          </article>
+            <h3><a href="{{ article._url }}">{{ article.title }}</a></h3>
+
+            <article>
+              {% if not apos.area.isEmpty(article, 'body') %}
+                <p class="article-blurb">{% area article, 'body' %}</p>
+                                   
+              {% else %}
+                <p class="placeholder">No blurb for this article</p>
+              {% endif %}
+            </article>
+
+          </div>
+
         </div>
       </div>
       {% endfor %}
@@ -32,4 +40,19 @@
     </div>
   </div>
 </div>
+
+ <!-- javascript to display only the first 100 characters of the article -->
+<script defer>
+  var articleBlurb = document.getElementsByClassName('article-blurb');
+  for (var i = 0; i < articleBlurb.length; i++) {
+    console.log(articleBlurb[i]);
+    var blurb = articleBlurb[i].innerHTML;
+    var blurbLength = blurb.length;
+    if (blurbLength > 100) {
+      blurb = blurb.substring(0, 100);
+      blurb += '...';
+    }
+    articleBlurb[i].innerHTML = blurb;
+  }
+  </script>
 
