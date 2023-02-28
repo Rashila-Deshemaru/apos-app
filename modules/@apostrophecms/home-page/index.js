@@ -67,9 +67,10 @@ module.exports = {
               widgets: {
                 'home-banner': {},
                 'services-column': {},
-                'article': {}
+                'article': {},
+                'pageredirect': {},
               },
-              cokumns: 3
+              columns: 2
             },
 
           }

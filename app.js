@@ -43,6 +43,8 @@ require('apostrophe')({
   
 
     'helper': {},
+    
+    'pageredirect': {},
 
   
     //custom widgets
@@ -57,6 +59,7 @@ require('apostrophe')({
     'home-banner-widget': {},
     'services-column-widget': {},
     'article-widget': {},
+    'pageredirect-widget': {},
   
 
     // The main form module

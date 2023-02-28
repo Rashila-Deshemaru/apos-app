@@ -9,14 +9,18 @@
   {% set class = class + ' button-widget--alignment-' + widget.alignment %}
 {% endif %}
 
-<div class="widget button-widget {{ class }}" id="{{ widget._id }}">
-  {{ link.render({
-    label: widget.linkText,
-    path: path,
-    target: widget.linkTarget,
-    class: 'button'
-  })}}
+
+<div class="button-block">
+  <div class="widget button-widget {{ class }}" id="{{ widget._id }}">
+    {{ link.render({
+      label: widget.linkText,
+      path: path,
+      target: widget.linkTarget,
+      class: 'button'
+    })}}
+  </div>
 </div>
+
 
 <style>
   #{{ widget._id }} .button:hover{

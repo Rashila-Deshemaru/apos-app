@@ -1,0 +1,20 @@
+<div class="page-redirect-widget">
+    <div class="container">
+        <div class="row">
+            {% for pageredirect in data.pageredirect %}
+
+            <div class="col-lg-4">
+                <div class="page-thumbnail">
+                    {% set image = apos.attachment.first(pageredirect, { group: 'images' }) %}
+                    <a href="{{ pageredirect._url }}"><img src="{{ image._urls[ 'one-third' ] }}"></a> 
+                </div>
+                
+                <h3 class="page-title"><a href="{{ pagedirect._url }}">{{ pagedirect.title }}</a></h3>
+
+                <a href="{{ pagedirect._url }}" class="page-excerpt"><p>{{ pagedirect.excerpt }}...</p></a>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

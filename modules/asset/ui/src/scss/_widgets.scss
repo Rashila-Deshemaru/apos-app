@@ -122,7 +122,9 @@
     color: white;
   }
 }
-
+.button-block {
+  padding: 50px 0;
+}
 .button-widget--alignment-left {
   justify-content: flex-start;
 }
@@ -171,7 +173,7 @@
   width: 100%;
   left: 0;
   text-align: center;
-  transform: translate(0, 50%);
+  transform: translate(0, -18%);
 }
 
 //services-column widget
@@ -238,6 +240,9 @@
 
 //article widget
 
+.recent-article-section {
+  padding: 50px 0;
+}
 .article-excerpt {
   .article-thumbnail {
     height: 500px;
@@ -263,11 +268,24 @@
           color: #064f5e;
         }       
     }
-    a.article-excerpt {
+    a.article-blurb {
+      color: #666;
       p {
-        font-size: 16px;
+        font-size: 20px;
         line-height: 24px;
-        color: #333333;
+        
+      }
+    }
+    .see-more-blog {
+      text-align: left;
+      margin-top: auto;
+      a {
+        color: #1b5f50;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        border-bottom: 3px solid #1b5f50;
+        text-transform: uppercase;
       }
     }
   }
