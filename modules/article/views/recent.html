@@ -13,21 +13,29 @@
           
           <div class="article-thumbnail">
             {% set image = apos.attachment.first(article, { group: 'images' }) %}
-            <img src="{{ image._urls[ 'one-third' ] }}">  
+            <a href="{{ article._url }}"><img src="{{ image._urls[ 'one-third' ] }}"></a> 
           </div>
 
           <div class="article-widget-body">
 
-            <h3><a href="{{ article._url }}">{{ article.title }}</a></h3>
+            <h3 class="article-title"><a href="{{ article._url }}">{{ article.title }}</a></h3>
 
             <article>
-              {% if not apos.area.isEmpty(article, 'body') %}
+              <!-- {% if not apos.area.isEmpty(article, 'body') %}
                 <p class="article-blurb">{% area article, 'body' %}</p>
                                    
               {% else %}
                 <p class="placeholder">No blurb for this article</p>
-              {% endif %}
+              {% endif %} -->
+
+              
+              <a href="{{ article._url }}" class="article-blurb"><p>{{ article.excerpt }}..</p></a>
+
             </article>
+
+            <div class="see-more-blog">
+              <a href="{{ article._url }}">See More</a>
+            </div>
 
           </div>
 
@@ -42,7 +50,7 @@
 </div>
 
  <!-- javascript to display only the first 100 characters of the article -->
-<script defer>
+<!-- <script defer>
   var articleBlurb = document.getElementsByClassName('article-blurb');
   for (var i = 0; i < articleBlurb.length; i++) {
     console.log(articleBlurb[i]);
@@ -54,5 +62,5 @@
     }
     articleBlurb[i].innerHTML = blurb;
   }
-  </script>
+  </script> -->
 

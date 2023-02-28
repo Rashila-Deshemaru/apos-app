@@ -250,15 +250,25 @@
   .article-widget-body {
     display: flex;
     flex-direction: column;
-    h3 { 
+    padding: 20px 0;
+    min-height: 270px;
+    justify-content: space-between;
+    h3.article-title { 
         font-size: 22px;
         font-weight: 900;
         line-height: 26px;
         padding: 15px 0;
+        margin: 0;
         a {
           color: #064f5e;
-        }
-       
+        }       
+    }
+    a.article-excerpt {
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333;
+      }
     }
   }
 }

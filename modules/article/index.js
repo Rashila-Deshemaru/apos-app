@@ -11,8 +11,7 @@ module.exports = {
         type: 'area',
         options: {
           widgets: {
-            '@apostrophecms/rich-text': {}
-  
+            '@apostrophecms/rich-text': {} 
           }
         }
       },
@@ -20,6 +19,13 @@ module.exports = {
         label: 'Feature image upload',
         type: 'attachment',
         fileGroup: 'images'
+      },
+      excerpt: {
+        label: 'Excerpt',
+        type: 'string',
+        required: true,
+        textarea: true,
+        max: 800
       },
       _topics: {
         type: 'relationship',
@@ -31,12 +37,12 @@ module.exports = {
             _url: 1
           }
         }
-      },
+      }
     },
     group: {
       basics: {
         label: 'Basics',
-        fields: [ 'title', 'body', 'fileUpload', '_topics' ]
+        fields: [ 'title', 'body', 'fileUpload', 'excerpt', '_topics' ]
       }
     }
   },
