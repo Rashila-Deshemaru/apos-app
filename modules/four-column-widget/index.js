@@ -44,7 +44,7 @@ module.exports = {
               ]
             },
             'cta-links': {}
-          }
+          },
         }
       },
       columnThree: {
@@ -88,6 +88,10 @@ module.exports = {
             'cta-links': {}
           }
         }
+      },
+      redirectLink: {
+        label: 'Redirect Link',
+        type: 'url',
       }
     }
   }

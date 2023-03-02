@@ -60,6 +60,7 @@ require('apostrophe')({
     'services-column-widget': {},
     'article-widget': {},
     'page-link-widget': {},
+    'card-widget': {},
 
   
 

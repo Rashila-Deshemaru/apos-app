@@ -1,18 +1,30 @@
 <div class="data-four-column-widget">
     <div class="container">
-        <section data-four-column-widget class="four-col home-redirects">
-            <div class="four-col__column one-fourth">
-                {% area data.widget, 'columnOne' %}
+        <section data-four-column-widget>
+            
+            <div class="four-col home-redirects">
+                <a href="{{ data.widget.redirectLink }}">
+                    <div class="four-col__column one-fourth">
+                        {% area data.widget, 'columnOne' %}
+                    </div>
+                </a>
+                <a href="{{ data.widget.redirectLink }}">
+                    <div class="four-col__column one-fourth">
+                        {% area data.widget, 'columnTwo' %}
+                    </div>
+                </a>
+                <a href="{{ data.widget.redirectLink }}">
+                    <div class="four-col__column one-fourth">
+                        {% area data.widget, 'columnThree' %}
+                    </div>
+                </a>
+                <a href="{{ data.widget.redirectLink }}">
+                    <div class="four-col__column one-fourth">
+                        {% area data.widget, 'columnFour' %}
+                    </div>
+                </a>
             </div>
-                <div class="four-col__column one-fourth">
-                {% area data.widget, 'columnTwo' %}
-            </div>
-            <div class="four-col__column one-fourth">
-                {% area data.widget, 'columnThree' %}
-            </div>
-            <div class="four-col__column one-fourth">
-                {% area data.widget, 'columnFour' %}
-            </div>
+        
         </section>
     </div>
 </div>

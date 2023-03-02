@@ -68,7 +68,8 @@ module.exports = {
                 'home-banner': {},
                 'services-column': {},
                 'article': {},
-                'page-link': {},
+                'card': {},
+                // 'page-link': {},
               },
               columns: 2
             },
