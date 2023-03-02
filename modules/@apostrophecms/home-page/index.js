@@ -68,7 +68,7 @@ module.exports = {
                 'home-banner': {},
                 'services-column': {},
                 'article': {},
-                'pageredirect': {},
+                'page-link': {},
               },
               columns: 2
             },

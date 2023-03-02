@@ -11,7 +11,6 @@ module.exports = {
         options: {
           widgets: {
             '@apostrophecms/rich-text': {},
-            '@apostrophecms/image': {},
             'button': {}
           }
         }
@@ -21,9 +20,7 @@ module.exports = {
         label: 'Right Section',
         options: {
           widgets: {
-            '@apostrophecms/rich-text': {},
-            '@apostrophecms/image': {},
-            'button': {}
+            '@apostrophecms/image': {}
           }
         }
       }

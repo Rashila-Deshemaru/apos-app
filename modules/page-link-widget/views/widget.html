@@ -1,0 +1,24 @@
+<section data-page-link-widget>
+ 
+    <a href="{{ data.widget.targetLink }}">
+        <div class="page-link-widget-content">
+            
+            <div class="page-thumbnail">
+                {% set image = apos.attachment.first(data.widget.thumbnail) %}
+                <img src="{{ apos.attachment.url(image) }}" alt="" />
+            </div>
+
+            <h2>{{ data.widget.title }}</h2>
+
+            <div class="page-except">
+                <p>{{ data.widget.info }}</p>
+            </div>
+
+            <div class="page-link">
+                <a href="{{ data.widget.targetLink }}">See More</a>
+            </div>
+
+        </div>
+    </a>          
+
+</section>
